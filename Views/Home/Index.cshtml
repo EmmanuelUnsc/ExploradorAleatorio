@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<h1 class="h3 mb-4 text-center">Explorador de contenido aleatorio</h1>
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+        <section class="card h-100 shadow-sm">
+            <div class="card-header fw-semibold">Citas y autores</div>
+            <div class="card-body">
+                <p id="estadoCita" class="estado"></p>
+                <blockquote id="contenidoCita" class="blockquote mb-0 d-none">
+                    <p id="textoCita"></p>
+                    <footer id="autorCita" class="blockquote-footer mt-2 mb-0"></footer>
+                </blockquote>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+                <button id="botonCita" type="button" class="btn btn-primary w-100">Obtener otra cita</button>
+            </div>
+        </section>
+    </div>
+
+    <div class="col">
+        <section class="card h-100 shadow-sm">
+            <div class="card-header fw-semibold">Imágenes de perros</div>
+            <div class="card-body">
+                <p id="estadoPerro" class="estado"></p>
+                <div class="marco-imagen">
+                    <img id="imagenPerro" class="d-none" alt="Foto aleatoria de un perro" />
+                </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+                <button id="botonPerro" type="button" class="btn btn-primary w-100">Mostrar otro perro</button>
+            </div>
+        </section>
+    </div>
+
+    <div class="col">
+        <section class="card h-100 shadow-sm">
+            <div class="card-header fw-semibold">Imágenes de gatos</div>
+            <div class="card-body">
+                <p id="estadoGato" class="estado"></p>
+                <div class="marco-imagen">
+                    <img id="imagenGato" class="d-none" alt="Foto aleatoria de un gato" />
+                </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+                <button id="botonGato" type="button" class="btn btn-primary w-100">Mostrar otro gato</button>
+            </div>
+        </section>
+    </div>
+
+    <div class="col">
+        <section class="card h-100 shadow-sm">
+            <div class="card-header fw-semibold">Datos curiosos</div>
+            <div class="card-body">
+                <p id="estadoDato" class="estado"></p>
+                <p id="textoDato" class="mb-0 d-none"></p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+                <button id="botonDato" type="button" class="btn btn-primary w-100">Mostrar otro dato</button>
+            </div>
+        </section>
+    </div>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/explorador.css" asp-append-version="true" />
+}
+
+@section Scripts {
+    <script src="~/js/explorador.js" asp-append-version="true"></script>
+}
